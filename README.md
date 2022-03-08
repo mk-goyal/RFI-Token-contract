@@ -10,7 +10,7 @@ Lines 78-79 are the percent of team fees to send to treasury and development. Th
 
 All fees are editable. Some tax tokens set a hardcoded maximum. This is set to 100% currently but can be adjusted in the setBuyFee and setSellFee functions in the require() statement.
 
-Transaction limits are set in the constructor function at lines 149-154. These can be eliminated removeLimits().
+Transaction limits are set in the constructor function at lines 149-154. These can be eliminated removeLimits(). They can be adjusted with setMaxTransaction and setMaxWallet functions. **NOTE: ADD AN EXTRA DIGIT FOR ACCURACY. EXAMPLE: 30 = 0.3%, 15 = 1.5%.**
 
 ## Adding team addresses
 

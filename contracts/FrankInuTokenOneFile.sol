@@ -1201,6 +1201,16 @@ contract FrankInuToken is Context, IERC20, Ownable {
         emit IncludeInFee(account);
     }
 
+    function setMaxTransactionAmount(uint256 newMaxBuy) external onlyOwner {
+        require(newMaxBuy > 0, "Cannot be 0");
+        maxTransactionAmount = (_tTotal * newMaxBuy) / 1000;
+    }
+
+    function setMaxWallet(uint256 newMaxWallet) external onlyOwner {
+        require(newMaxWallet > 0, "Cannot be 0");
+        maxWalletAmount = (_tTotal * newMaxWallet) / 1000;
+    }
+
     function setBuyFee(
         uint256 buyTaxFee,
         uint256 buyLiquidityFee,
